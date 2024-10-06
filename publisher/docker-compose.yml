@@ -1,0 +1,15 @@
+version: "3.8"
+networks:
+  default:
+    name: mqtt5-network
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto
+    container_name: mqtt-broker
+    volumes:
+      - ./config:/mosquitto/config:rw
+      - ./log:/mosquitto/log:rw
+    restart: unless-stopped
+    ports:
+      - "1883:1883" #default mqtt port
+      - "9001:9001" #default mqtt port for websockets

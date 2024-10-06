@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MqttExampleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MqttExampleApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MqttExampleApplication.class, args);
+    }
 
 }
